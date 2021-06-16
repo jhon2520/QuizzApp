@@ -25,6 +25,34 @@ class Body extends StatelessWidget {
                     border: Border.all(color:Color(0xFF3F4768),width: 3),
                     borderRadius: BorderRadius.circular(50)
                   ),
+                  child: Stack(
+                    children: [
+                      //layoutBuilder provide us the avalible space
+                      //for the container
+                      //constrains.maxwidth needed for our animatiio
+                      LayoutBuilder(
+                        builder: (context,constrains)=>Container(
+                          width: constrains.maxWidth * 0.5, //cover 50%
+                          decoration: BoxDecoration(
+                            gradient: kPrimaryGradient,
+                            borderRadius: BorderRadius.circular(50)
+                          ),
+                        )
+                        ),
+                        Positioned.fill(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: kDefaultPadding /2
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("18 sec"),
+                                WebsafeSvg.asset("assets/icons/clock.svg")
+                              ],
+                            ),
+                          ))
+                    ],),
                 )
               ],
             ),

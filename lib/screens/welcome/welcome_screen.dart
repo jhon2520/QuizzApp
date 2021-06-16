@@ -16,7 +16,7 @@ class WelcomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Spacer(
-                  flex: 2,
+                  flex: 2, // 2/6
                 ),
                 Text(
                   "Juguemos una trivia",
@@ -30,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.normal,
                       fontSize: 15),
                 ),
-                Spacer(),
+                Spacer(), // 1/6
                 TextField(
                   decoration: InputDecoration(
                       filled: true,
@@ -40,7 +40,7 @@ class WelcomeScreen extends StatelessWidget {
                           borderRadius:
                               BorderRadius.all(Radius.circular((12))))),
                 ),
-                Spacer(),
+                Spacer(), // 1/6
                 InkWell(
                   onTap: (){},
                   child: Container(
@@ -58,7 +58,7 @@ class WelcomeScreen extends StatelessWidget {
                     ,)
                   ),
                 ),
-                Spacer(flex: 2,)
+                Spacer(flex: 2,) // it will takes 2/6 spaces  
               ],
             ),
           ))
